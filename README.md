@@ -1,2 +1,2 @@
 # covid19-portfolioproject
-(SQLiteStudio) COVID19 Portfolio Project - Data Exploration
+(MSSMS) COVID19 Portfolio Project - Data Exploration
