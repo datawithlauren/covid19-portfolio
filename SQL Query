@@ -43,7 +43,7 @@ ORDER BY 1,2
 
 
 
--- Countries with highest infection rate compared to population
+-- Countries with highest infection rate compared to population (Table 3) (Inclusion of 'date' for Table 4)
 
 SELECT Location, population, MAX(total_cases) AS HighestInfectionCount, MAX((total_cases/population))*100 AS PercentPopulationInfected
 FROM PortfolioProject..['Covid Deaths$']
@@ -63,7 +63,7 @@ ORDER BY TotalDeathCount DESC
 
 
 
--- Continents with the Highest Death Count per population
+-- Continents with the Highest Death Count per population (Table 2)
 
 SELECT continent, MAX(CAST(total_deaths AS INT)) AS TotalDeathCount
 FROM PortfolioProject..['Covid Deaths$']
@@ -73,7 +73,7 @@ ORDER BY TotalDeathCount DESC
 
 
 
--- Worldwide numbers
+-- Worldwide numbers (Table 1)
 
 SELECT SUM(new_cases) AS TotalCases , SUM(CAST(new_deaths AS INT)) AS TotalDeaths, SUM(CAST(new_deaths AS INT))/SUM(new_cases)*100 AS DeathPercentage
 FROM PortfolioProject..['Covid Deaths$']
